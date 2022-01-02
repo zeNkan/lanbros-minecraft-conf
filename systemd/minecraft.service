@@ -1,0 +1,14 @@
+[Unit]
+Description=Lanbros Survival
+After=network.target
+
+[Service]
+Type=simple
+User=minecraft
+Group=minecraft
+WorkingDirectory=/opt/minecraft/server/lanbros_survival
+ExecStart=/usr/bin/java -Xmx7G -Xms7G -jar server.jar nogui
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
